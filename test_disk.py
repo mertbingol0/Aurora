@@ -1,0 +1,1 @@
+#diski test edecek kodu yaz
