@@ -3,6 +3,8 @@ Aurora is a server management and monitoring system that is currently under cons
 
 Also, I am currently developing a disk management library. If you want to use this library, you will need to use a Python and Linux-based system.
 
+<img src='imgs/Screenshot_20230508_231632.png'>
+
 # Which Used to Technologies for This Project?
 I use Flask, various Linux software (for example, smartctl), and Subprocess to develop this project.
 
