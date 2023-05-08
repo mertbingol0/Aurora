@@ -13,6 +13,7 @@ To be able to run this project, you only need to download the Flask library and 
 
 ### install for requements:
 ```
+cd aurora
 chmod 700 req.sh
 ./req.sh
 ```
