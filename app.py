@@ -1,13 +1,16 @@
-from list_disk import list_disk
-from test_disk import test_disk
+from flask import Flask, render_template
+from disk_analyzer import disk_test
+import json
 
-print('1 - List Disk')
-print('2 - Test Disk')
+app = Flask(__name__)
 
-select_ps = input('Please select a prosses: ')
-if select_ps == '1':
-    list_disk()
-elif select_ps == '2':
-    test_disk()
-else:
-    print('cannot prosses')
+@app.route('/')
+def disk_analyzer():
+    disk_test()
+    with open('veriler.json', 'r') as f:
+        veriler = json.load(f)
+    return render_template('index.html', veriler=veriler)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
