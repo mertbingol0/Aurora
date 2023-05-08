@@ -9,14 +9,14 @@ def disk_test():
     test_output_2 = sb.check_output(['sudo', 'smartctl', '-H', secon_disk]).decode()
 
     if 'PASSED' in test_output_1:
-        first_disk_status = f'{first_disk} adli disk calisiyor \U0001F607'
+        first_disk_status = f'{first_disk} named disk is working \U0001F607'
     else:
-        first_disk_status = f'{first_disk} adli disk calismiyor \U0001F620'
+        first_disk_status = f'{first_disk} named disk is not working \U0001F620'
 
     if 'PASSED' in test_output_2:
-        second_disk_status = f'{secon_disk} adli disk calisiyor \U0001F607 '
+        second_disk_status = f'{secon_disk} named disk is working \U0001F607 '
     else:
-        secons_disk_status = f'{secon_disk} adli disk calismiyor \U0001F620'
+        secons_disk_status = f'{secon_disk} named disk is not working \U0001F620'
 
     data =	{
         'disk1': first_disk_status,
