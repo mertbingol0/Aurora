@@ -10,10 +10,10 @@ I use Flask, various Linux software (for example, smartctl), and Subprocess to d
 
 NOTE: I will also add all the libraries and tools that I will use in the future to this readme.
 
-# Requements
+# Requirements
 To be able to run this project, you only need to download the Flask library and the smartmontools tool.
 
-### install for requements:
+### install for uirements:
 ```
 cd Aurora
 chmod 700 req.sh
