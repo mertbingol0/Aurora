@@ -2,25 +2,25 @@ import subprocess as sb
 import json
 
 def disk_test():
-    once_disk = '/dev/sda'
-    twice_disk = '/dev/sdb'
+    first_disk = '/dev/sda'
+    secon_disk = '/dev/sdb'
 
-    test_output_1 = sb.check_output(['sudo', 'smartctl', '-H', once_disk]).decode()
-    test_output_2 = sb.check_output(['sudo', 'smartctl', '-H', twice_disk]).decode()
+    test_output_1 = sb.check_output(['sudo', 'smartctl', '-H', first_disk]).decode()
+    test_output_2 = sb.check_output(['sudo', 'smartctl', '-H', secon_disk]).decode()
 
     if 'PASSED' in test_output_1:
-        once_disk_status = f'{once_disk} adli disk calisiyor \U0001F607'
+        first_disk_status = f'{first_disk} adli disk calisiyor \U0001F607'
     else:
-        once_disk_status = f'{once_disk} adli disk calismiyor \U0001F620'
+        first_disk_status = f'{first_disk} adli disk calismiyor \U0001F620'
 
     if 'PASSED' in test_output_2:
-        twice_disk_status = f'{twice_disk} adli disk calisiyor \U0001F607 '
+        second_disk_status = f'{secon_disk} adli disk calisiyor \U0001F607 '
     else:
-        twice_disk_status = f'{twice_disk} adli disk calismiyor \U0001F620'
+        secons_disk_status = f'{secon_disk} adli disk calismiyor \U0001F620'
 
     data =	{
-        'disk1': once_disk_status,
-        'disk2': twice_disk_status
+        'disk1': first_disk_status,
+        'disk2': second_disk_status
         }
 
     with open('veriler.json', 'w') as f:
