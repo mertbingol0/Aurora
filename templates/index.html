@@ -135,10 +135,11 @@
 <div class="col-md-3" id="tg-sb-sidebar">
 <ul id="mysidebar" class="nav">
 <li class="sidebarTitle">Aurora</li>
+<li><a title="Overview" href="#">Aurora</a></li>
 <li>
 <a title="Overview" href="#">Disk Management</a>
 <ul>
-<li><a title="Get started" href="index.html">Disk Status</a></li>
+<li><a title="Get started" href="disk-status.html">Disk Status</a></li>
 
 </ul>
 </li>
@@ -154,10 +155,51 @@
 
 <div class="col-md-9" id="tg-sb-content">
 <div class="post-header">
-<h1 class="post-title-main">Disk Status</h1>
+<h1 class="post-title-main">Main Page</h1>
 </div>
 <div class="post-content">
-<div class="summary">Here you can see the health status of your disks:</div>
+<div class="summary">Main Page descripton</div>
+
+<h1>What is Aurora?</h1>
+<p>Aurora is a server management and monitoring system that is currently under construction. For now, you can only see if the disk is healthy or not. However, I will develop it to do management or monitoring for the entire system.</p>
+
+<p>Also, I am currently developing a disk management library. If you want to use this library, you will need to use a Python and Linux-based system.</p>
+
+<h2>Which Used to Technologies for This Project?</h2>
+<p>
+    I use Flask, various Linux software (for example, smartctl), and Subprocess to develop this project.</p>
+<p>NOTE: I will also add all the libraries and tools that I will use in the future to this readme.</p>
+
+<h2>Install for Requirements</h2>
+<p>
+    To be able to run this project, you only need to download the Flask library and the smartmontools tool.</p>
+
+<pre>cd Aurora
+chmod 700 req.sh
+./req.sh</pre>
+
+<h2>Manual installation</h2>
+<p>Arch:</p>
+<pre>sudo pacman -Ssyu -y
+sudo pacman -S smartmontools
+yay -S python-pip
+pip install flask</pre>
+
+
+<p>Debian:</p>
+<pre>sudo apt update -y 
+sudo apt upgrade -y
+sudo apt install smartmontools -y
+sudo apt install python3-pip
+pip install flask
+</pre>
+
+<p>Fedora</p>
+<pre>sudo dnf upgrade --refresh
+sudo dnf install smartmontools -y
+sudo dnf install python3-pip
+pip install flask</pre>
+
 
 <script>
 $( document ).ready(function() {
@@ -177,11 +219,8 @@ $('#toc').on('click', 'a', function() {
 });
 </script>
 <div id="toc"></div>
-<p>Here you can see the health status of your disks. I did this with a Python script. And I used smartctl while doing it.</p><div class="tags">
 
 
-    <p>Disk 1: {{ veriler['disk1'] }}</p>
-    <p>Disk 2: {{ veriler['disk2'] }}</p>
 
 
 
