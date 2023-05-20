@@ -23,7 +23,7 @@ def disk_test():
         'disk2': second_disk_status
         }
 
-    with open('veriler.json', 'w') as f:
+    with open('disk_status.json', 'w') as f:
         json.dump(data, f)
 
 disk_test()
